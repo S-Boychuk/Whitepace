@@ -13,10 +13,386 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
+    <header class="header">
+        <div class="container header__container">
+            <a class="logo header__logo link" href="./index.html">
+                <svg class="logo__icon header__logo-icon" aria-hidden="true" viewBox="0 0 39 32">
+                    <use href="./images/symbol-defs.svg#icon-logo"></use>
+                </svg>
+                <span class="logo__text header__logo-text">whitepace</span>
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav-list list">
+                    <li class="header__nav-item"><a class="header__nav-link link" href="#">Products</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link link" href="#">Solutions</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link link" href="#">Resources</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link link" href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="header__login-btn" type="button"> Login</button>
+                <button class="header__cta-btn" href="#" type="button">Try Whitepace free
+                    <svg class="header__cta-icon" aria-hidden="true" width="10" height="10">
+                        <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+            </div>
+            <button class="header__burger-btn" type="button" aria-label="Open burger menu">
+                <svg class="header__burger-icon" aria-hidden="true">
+                    <use href="./images/symbol-defs.svg#icon-burger-menu"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Get More Done with whitepace</h1>
+                <p class="hero__text">Project management software that enables your teams to collaborate, plan, analyze
+                    and
+                    manage everyday tasks</p>
+                <button class="hero__btn" type="button">Try TasKey Free
+                    <svg class="hero__btn-icon" width="10" height="10" aria-hidden="true">
+                        <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="collaboration">
+            <div class="container collaboration__container">
+                <div>
+                    <h2 class=" collaboration__title">Work together</h2>
+                    <p class="collaboration__text">With whitepace, share your notes with your colleagues and collaborate
+                        on
+                        them. You can also publish a note to the internet and share the URL with others.
+                    </p>
+                    <button class="collaboration__btn" type="button">
+                        Try it now
+                        <svg class="collaboration__btn-icon" width="14" height="14" aria-hidden="true">
+                            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+                <!-- <img class="collaboration__img" src="./images/collaboration-img.svg" alt="Collaboration illustration"> -->
+                <img class="collaboration__img" srcset="
+            ./images/collaboration-mob-1x.png 280w, 
+            ./images/collaboration-mob-2x.png 559w,
+            ./images/collaboration-tabl-1x.png 454w,
+            ./images/collaboration-tabl-2x.png 908w, 
+            ./images/collaboration-dt-1x.png 583w, 
+            ./images/collaboration-dt-2x.png 1166w" sizes=" 
+            (min-width: 1440px) 583px,
+            (min-width: 768px) 454px,
+            (min-width: 320px) 279px" src="./images/collaboration-mob-1x.png" alt="Collaboration illustration">
+            </div>
+
+        </section>
+        <section class="pricing">
+            <div class="container">
+                <h2 class="pricing__title">Choose Your Plan</h2>
+                <p class="pricing__description">Whether you want to get organized, keep your personal life on track, or
+                    boost workplace productivity, Evernote has the right plan for you.</p>
+                <div class="pricing__slider swiper">
+                    <ul class="pricing__plans list swiper-wrapper">
+                        <li class="pricing__plan swiper-slide">
+                            <div class="pricing__plan-scale"></div>
+                            <h3 class="pricing__plan-name">Free</h3>
+                            <p class="pricing__plan-price">$0</p>
+                            <p class="pricing__plan-description">Capture ideas and find them quickly</p>
+                            <ul class="pricing__plan-benefits list">
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Sync unlimited devices</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">10 GB monthly uploads</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">200 MB max. note size</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Customize Home dashboard and access extra
+                                        widgets
+                                    </p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Connect primary Google Calendar account</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Add due dates, reminders, and notifications to
+                                        your tasks</p>
+                                </li>
+                            </ul>
+                            <button class="pricing__btn">Get Started</button>
+                        </li>
+                        <li class="pricing__plan swiper-slide">
+                            <div class="pricing__plan-scale"></div>
+                            <h3 class="pricing__plan-name">Personal</h3>
+                            <p class="pricing__plan-price">$11.99</p>
+                            <p class="pricing__plan-description">Keep home and family on track</p>
+                            <ul class="pricing__plan-benefits list">
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Sync unlimited devices</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">10 GB monthly uploads</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">200 MB max. note size</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Customize Home dashboard and access extra
+                                        widgets
+                                    </p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Connect primary Google Calendar account</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Add due dates, reminders, and notifications to
+                                        your tasks</p>
+                                </li>
+                            </ul>
+                            <button class="pricing__btn">Get Started</button>
+                        </li>
+                        <li class="pricing__plan swiper-slide">
+                            <div class="pricing__plan-scale"></div>
+                            <h3 class="pricing__plan-name">Organization</h3>
+                            <p class="pricing__plan-price">$49.99</p>
+                            <p class="pricing__plan-description">Capture ideas and find them quickly</p>
+                            <ul class="pricing__plan-benefits list">
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Sync unlimited devices</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">10 GB monthly uploads</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">200 MB max. note size</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Customize Home dashboard and access extra
+                                        widgets
+                                    </p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Connect primary Google Calendar account</p>
+                                </li>
+                                <li class="pricing__plan-benefit">
+                                    <svg class="pricing__plan-benefit-icon" width="18" height="18">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    <p class="pricing__plan-benefit-text">Add due dates, reminders, and notifications to
+                                        your tasks</p>
+                                </li>
+                            </ul>
+                            <button class="pricing__btn">Get Started</button>
+                        </li>
+                    </ul>
+                    <div class="pricing__pagination swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="sponsors">
+            <div class="container">
+                <h2 class="sponsors__title">Our sponsors</h2>
+                <ul class="sponsors__list list">
+                    <li class="sponsors__item">
+                        <a class="sponsors__link link" href="https://www.apple.com" target="_blank"
+                            rel="noopener noreferrer sponsored" aria-label="Apple logo">
+                            <svg class="sponsors__icon" role="img" viewBox="0 0 26 32">
+                                <use href="./images/symbol-defs.svg#icon-apple"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sponsors__item">
+                        <a class="sponsors__link link" href="https://www.microsoft.com" target="_blank"
+                            rel="noopener noreferrer sponsored" aria-label="Microsoft logo">
+                            <svg class="sponsors__icon" role="img" viewBox="0 0 146 32">
+                                <use href="./images/symbol-defs.svg#icon-microsoft"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sponsors__item">
+                        <a class="sponsors__link link" href="https://slack.com" target="_blank"
+                            rel="noopener noreferrer sponsored" aria-label="Slack logo">
+                            <svg class="sponsors__icon" role="img" viewBox="0 0 125 32">
+                                <use href="./images/symbol-defs.svg#icon-slack"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sponsors__item">
+                        <a class="sponsors__link link" href="https://www.google.com" target="_blank"
+                            rel="noopener noreferrer sponsored" aria-label="Google logo">
+                            <svg class="sponsors__icon" role="img" viewBox="0 0 95 32">
+                                <use href="./images/symbol-defs.svg#icon-google"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div>
+                <a class="logo footer__logo link" href="./index.html">
+                    <svg class="logo__icon footer__logo-icon" aria-hidden="true" viewBox="0 0 39 32">
+                        <use href="./images/symbol-defs.svg#icon-logo"></use>
+                    </svg>
+                    <span class="logo__text footer__logo-text">whitepace</span>
+                </a>
+                <p class="footer__description">whitepace was created for the new ways we live and work. We make a
+                    better workspace around the world</p>
+            </div>
+            <nav class="footer__nav">
+                <div>
+                    <h3 class="footer__nav-title">Product</h3>
+                    <ul class="footer__list list">
+                        <li class="footer__item"><a class="footer__link link" href="#">Overview</a></li>
+                        <li class="footer__item"><a class="footer__link link" href="#">Pricing</a></li>
+                        <li class="footer__item"><a class="footer__link link" href="#">Customer stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__nav-title">Resources</h3>
+                    <ul class="footer__list list">
+                        <li class="footer__item"><a class="footer__link link" href="#">Blog</a></li>
+                        <li class="footer__item"><a class="footer__link link" href="#">Guides & tutorials</a></li>
+                        <li class="footer__item"><a class="footer__link link" href="#">Help center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__nav-title">Company</h3>
+                    <ul class="footer__list list">
+                        <li class="footer__item"><a class="footer__link link" href="#">About us</a></li>
+                        <li class="footer__item"><a class="footer__link link" href="#">Careers</a></li>
+                        <li class="footer__item"><a class="footer__link link" href="#">Media kit</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer__cta">
+                <h3 class="footer__cta-title">Try It Today</h3>
+                <p class="footer__cta-text">
+                    Get started for free. Add your whole team as your needs grow.
+                </p>
+                <button class="footer__cta-btn" type="button">Start today
+                    <svg class="footer__cta-btn-icon" width="14" height="14" aria-hidden="true">
+                        <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function () {
+            let pricingSwiper = null;
+
+            function enableSwiper() {
+                if (pricingSwiper) return; // вже увімкнений
+                pricingSwiper = new Swiper('.pricing__slider', {
+                    // Базова поведінка
+                    slidesPerView: 'auto',  // ширина з CSS
+                    centeredSlides: true,   // по центру
+
+                    // відстань між слайдами на мобілці/планшеті
+                    loop: false,
+
+                    // Пагінація-крапки
+                    pagination: {
+                        el: '.pricing__pagination',
+                        clickable: true
+                    },
+                    simulateTouch: true,
+                    touchRatio: 1,
+                    grabCursor: true
+
+                });
+            }
+
+            function disableSwiper() {
+                if (!pricingSwiper) return; // уже вимкнений
+                pricingSwiper.destroy(true, true); // повністю знести
+                pricingSwiper = null;
+
+                // Прибираємо інлайнові стилі, які Swiper додає елементам
+                const wrapper = document.querySelector('.pricing__plans');
+                if (wrapper) wrapper.removeAttribute('style');
+                document.querySelectorAll('.pricing__plan').forEach(slide => {
+                    slide.removeAttribute('style');
+                });
+            }
+
+            function handleResize() {
+                // Вмикаємо слайдер тільки < 1440px
+                if (window.matchMedia('(min-width: 1440px)').matches) {
+                    disableSwiper();
+                } else {
+                    enableSwiper();
+                }
+            }
+
+            // Запускаємо при завантаженні і на ресайз
+            window.addEventListener('load', handleResize);
+            window.addEventListener('resize', handleResize);
+        })();
+    </script>
 
 </body>
 
