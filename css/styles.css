@@ -539,8 +539,7 @@ img {
 }
 
 .pricing__slider {
-	position: relative;
-	overflow: visible;
+	padding-bottom: 85px;
 }
 
 .pricing__plan {
@@ -617,7 +616,7 @@ img {
 }
 
 .pricing__pagination {
-	--swiper-pagination-bottom: -85px;
+	--swiper-pagination-bottom: 0;
 	display: flex;
 	justify-content: center;
 }
