@@ -546,7 +546,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
-	width: 289px;
+	max-width: 289px;
 	margin: 0 calc((100vw - 289px) / 2);
 	padding: 20px;
 
@@ -650,7 +650,7 @@ img {
 	}
 
 	.pricing__plan {
-		width: 472px;
+		max-width: 472px;
 		margin: 0 calc((100vw - 472px) / 2);
 		padding: 80px 44px;
 	}
@@ -673,6 +673,7 @@ img {
 		margin: 0 auto;
 		margin-bottom: 80px;
 	}
+
 	.pricing__plans {
 		display: flex;
 		gap: 32px;

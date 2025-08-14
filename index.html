@@ -340,60 +340,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        (function () {
-            let pricingSwiper = null;
-
-            function enableSwiper() {
-                if (pricingSwiper) return; // вже увімкнений
-                pricingSwiper = new Swiper('.pricing__slider', {
-                    // Базова поведінка
-                    slidesPerView: 'auto',  // ширина з CSS
-                    centeredSlides: true,   // по центру
-
-                    // відстань між слайдами на мобілці/планшеті
-                    loop: false,
-
-                    // Пагінація-крапки
-                    pagination: {
-                        el: '.pricing__pagination',
-                        clickable: true
-                    },
-                    simulateTouch: true,
-                    touchRatio: 1,
-                    grabCursor: true
-
-                });
-            }
-
-            function disableSwiper() {
-                if (!pricingSwiper) return; // уже вимкнений
-                pricingSwiper.destroy(true, true); // повністю знести
-                pricingSwiper = null;
-
-                // Прибираємо інлайнові стилі, які Swiper додає елементам
-                const wrapper = document.querySelector('.pricing__plans');
-                if (wrapper) wrapper.removeAttribute('style');
-                document.querySelectorAll('.pricing__plan').forEach(slide => {
-                    slide.removeAttribute('style');
-                });
-            }
-
-            function handleResize() {
-                // Вмикаємо слайдер тільки < 1440px
-                if (window.matchMedia('(min-width: 1440px)').matches) {
-                    disableSwiper();
-                } else {
-                    enableSwiper();
-                }
-            }
-
-            // Запускаємо при завантаженні і на ресайз
-            window.addEventListener('load', handleResize);
-            window.addEventListener('resize', handleResize);
-        })();
-    </script>
-
+    <script src="./js/pricing-slider.js"></script>
 </body>
 
 </html>
