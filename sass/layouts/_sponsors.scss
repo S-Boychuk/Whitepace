@@ -1,0 +1,92 @@
+@use "../abstracts/mixins" as mx;
+
+.sponsors {
+	@include mx.section-padding(0, 80px, 0, 140px);
+
+	&__title {
+		@include mx.section-title(var(--primary-dark-color), 100px);
+
+		text-align: center;
+
+		@media screen and (min-width: 768px) {
+			font-size: 54px;
+			line-height: 1.22;
+		}
+
+		@media screen and (min-width: 1440px) {
+			font-size: 72px;
+		}
+
+		&::after {
+			@include mx.title-after(82.25%, 33.68%, 66.32%, 51.39%);
+
+			@media screen and (min-width: 768px) {
+				left: 41.21%;
+				top: 65.07%;
+				width: 35.85%;
+				height: 59.65%;
+			}
+
+			@media screen and (min-width: 1440px) {
+				left: 43.61%;
+				top: 75.53%;
+				width: 24.58%;
+				height: 48.82%;
+			}
+		}
+	}
+
+	&__list {
+		@include mx.flex($align: center, $direction: column, $gap: 100px);
+
+		@media screen and (min-width: 1440px) {
+			@include mx.flex($direction: row, $gap: 180px);
+		}
+	}
+
+	&__item {
+		&:nth-child(1) .sponsors__icon {
+			width: 56px;
+		}
+
+		&:nth-child(2) {
+			.sponsors__icon {
+				width: 213px;
+
+				@media screen and (min-width: 768px) {
+					width: 287px;
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			.sponsors__icon {
+				width: 192px;
+
+				@media screen and (min-width: 768px) {
+					width: 280px;
+				}
+			}
+		}
+
+		&:nth-child(4) {
+			.sponsors__icon {
+				width: 140px;
+
+				@media screen and (min-width: 768px) {
+					width: 211px;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		display: block;
+		transition: transform var(--transition-base);
+
+		&:hover,
+		&:focus {
+			transform: scale(1.2);
+		}
+	}
+}

@@ -1,0 +1,80 @@
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/placeholders" as *;
+
+.collaboration {
+	@include mx.section-padding(80px, 80px, 140px, 140px);
+
+	&__container {
+		@media screen and (max-width: 1439px) {
+			text-align: center;
+		}
+
+		@media screen and (min-width: 1440px) {
+			@include mx.flex($align: center, $direction: row-reverse, $gap: 160px);
+		}
+	}
+
+	&__title {
+		@include mx.section-title(var(--primary-dark-color));
+
+		@media screen and (min-width: 768px) {
+			font-size: 54px;
+			line-height: 1.2;
+		}
+
+		@media screen and (min-width: 1440px) {
+			font-size: 72px;
+		}
+
+		&::after {
+			@include mx.title-after(46.34%, 42.36%, 52.1%, 57.8%);
+
+			@media screen and (min-width: 768px) {
+				top: 75.38%;
+				left: 44.5%;
+				width: 30.77%;
+				height: 48.23%;
+			}
+
+			@media screen and (min-width: 1440px) {
+				top: 74.98%;
+				left: 33.9%;
+				width: 52.78%;
+				height: 29.37%;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 60px;
+
+		color: var(--primary-dark-color);
+	}
+
+	&__btn {
+		@include mx.flex($align: center, $gap: 10px);
+		@extend %btn;
+
+		margin: 0 auto 60px;
+		padding: 20px 40px;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 100px;
+		}
+
+		@media screen and (min-width: 1440px) {
+			margin: 0;
+		}
+	}
+
+	&__btn-icon {
+		fill: none;
+		stroke: currentColor;
+	}
+
+	&__img {
+		@media screen and (max-width: 1439px) {
+			margin: 0 auto;
+		}
+	}
+}

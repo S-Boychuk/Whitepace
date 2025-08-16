@@ -1,0 +1,144 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/mixins" as mx;
+
+.footer {
+	@include mx.section-padding(80px, 80px, 140px, 140px);
+
+	background-color: var(--primary-color);
+
+	&__container {
+		@include mx.flex($direction: column, $gap: 80px);
+
+		@media screen and (max-width: 767px) {
+			align-items: center;
+			text-align: center;
+		}
+
+		@media screen and (min-width: 768px) {
+			gap: 100px;
+		}
+
+		@media screen and (min-width: 1440px) {
+			flex-direction: row;
+		}
+	}
+
+	&__description {
+		margin-top: 24px;
+
+		color: var(--secondary-light-color);
+
+		@media screen and (min-width: 768px) {
+			max-width: 500px;
+		}
+
+		@media screen and (min-width: 1440px) {
+			max-width: 240px;
+		}
+	}
+
+	&__logo {
+		@extend %logo;
+
+		@media screen and (max-width: 767px) {
+			justify-content: center;
+		}
+
+		&-icon {
+			fill: var(--primary-light-color);
+			width: 37px;
+
+			@media screen and (min-width: 768px) and (max-width: 1439px) {
+				width: 68px;
+			}
+		}
+
+		&-text {
+			@extend %logo-text;
+
+			font-size: 28px;
+
+			@media screen and (min-width: 768px) and (max-width: 1439px) {
+				font-size: 52px;
+			}
+		}
+	}
+
+	&__nav {
+		@include mx.flex($direction: column, $gap: 80px);
+
+		@media screen and (min-width: 768px) {
+			gap: 100px;
+		}
+
+		@media screen and (min-width: 1440px) {
+			flex-direction: row;
+		}
+	}
+
+	&__nav-title {
+		margin-bottom: 15px;
+
+		line-height: 1.22;
+		color: var(--primary-light-color);
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__link {
+		color: var(--primary-light-color);
+
+		transition: color var(--transition-base);
+
+		&:hover,
+		&:focus {
+			color: var(--secondary-accent-color);
+		}
+	}
+
+	&__cta {
+		max-width: 200px;
+
+		@media screen and (min-width: 1440px) {
+			max-width: 260px;
+		}
+	}
+
+	&__cta-title {
+		margin-bottom: 23px;
+
+		font-size: 28px;
+		color: var(--primary-light-color);
+	}
+
+	&__cta-text {
+		margin-bottom: 23px;
+
+		letter-spacing: 0;
+		color: var(--primary-light-color);
+
+		@media screen and (min-width: 1440px) {
+			line-height: 1.25;
+		}
+	}
+
+	&__cta-btn {
+		@include mx.flex($align: center, $gap: 10px);
+		@extend %btn;
+
+		padding: 20px 40px;
+
+		@media screen and (max-width: 767px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__cta-btn-icon {
+		fill: none;
+		stroke: currentColor;
+	}
+}

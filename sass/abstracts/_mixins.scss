@@ -1,0 +1,60 @@
+@mixin section-padding(
+	$mob-top,
+	$mob-bottom,
+	$tablet-top: null,
+	$tablet-bottom: null
+) {
+	padding-top: $mob-top;
+	padding-bottom: $mob-bottom;
+
+	@if $tablet-top != null or $tablet-bottom != null {
+		@media screen and (min-width: 768px) {
+			@if $tablet-top {
+				padding-top: $tablet-top;
+			}
+			@if $tablet-bottom {
+				padding-bottom: $tablet-bottom;
+			}
+		}
+	}
+}
+
+@mixin section-title($color, $margin-bottom: 24px) {
+	position: relative;
+	z-index: 1;
+	margin-bottom: $margin-bottom;
+
+	font-size: 36px;
+	line-height: 1.22;
+	color: $color;
+}
+
+@mixin title-after($top, $left, $width, $height) {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	display: block;
+	top: $top;
+	left: $left;
+	width: $width;
+	height: $height;
+	background-image: url(../../images/text-decor.svg);
+	background-size: 100% 100%;
+}
+
+@mixin flex($align: null, $justify: null, $direction: null, $gap: null) {
+	display: flex;
+
+	@if $align {
+		align-items: $align;
+	}
+	@if $justify {
+		justify-content: $justify;
+	}
+	@if $direction {
+		flex-direction: $direction;
+	}
+	@if $gap {
+		gap: $gap;
+	}
+}

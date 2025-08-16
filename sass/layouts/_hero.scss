@@ -1,0 +1,55 @@
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/placeholders" as *;
+
+.hero {
+	@include mx.section-padding(80px, 80px, 140px, 140px);
+
+	background-color: var(--primary-color);
+	background-image: url(../images/hero-bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&__title {
+		@include mx.section-title(var(--primary-light-color));
+
+		text-align: center;
+		text-transform: capitalize;
+
+		@media screen and (min-width: 768px) {
+			font-size: 54px;
+			line-height: 1.2;
+		}
+
+		@media screen and (min-width: 1440px) {
+			font-size: 64px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 60px;
+
+		text-align: center;
+		color: var(--primary-light-color);
+
+		@media screen and (min-width: 1440px) {
+			max-width: 728px;
+			margin: 0 auto 60px;
+		}
+	}
+
+	&__btn {
+		@include mx.flex($align: center, $gap: 10px);
+		@extend %btn;
+
+		margin: 0 auto;
+		padding: 20px 40px;
+
+		text-transform: capitalize;
+	}
+
+	&__btn-icon {
+		fill: none;
+		stroke: currentColor;
+	}
+}
