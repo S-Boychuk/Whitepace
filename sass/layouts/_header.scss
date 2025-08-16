@@ -1,0 +1,139 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/mixins" as mx;
+
+.header {
+	@include mx.section-padding(16px, 16px);
+
+	background-color: var(--primary-color);
+
+	&__container {
+		@include mx.flex(center);
+
+		@media screen and (max-width: 1439px) {
+			@include mx.flex($justify: space-between);
+		}
+	}
+
+	&__logo {
+		@extend %logo;
+
+		@media screen and (min-width: 1440px) {
+			margin-right: 258px;
+		}
+
+		&-icon {
+			fill: var(--primary-light-color);
+			width: 26px;
+
+			@media screen and (min-width: 768px) {
+				width: 37px;
+			}
+
+			@media screen and (min-width: 1440px) {
+				width: 60px;
+			}
+		}
+
+		&-text {
+			@extend %logo-text;
+			font-size: 20px;
+
+			@media screen and (min-width: 768px) {
+				font-size: 28px;
+			}
+		}
+	}
+
+	&__nav {
+		@media screen and (min-width: 1440px) {
+			margin-right: 76px;
+		}
+
+		@media screen and (max-width: 1439px) {
+			display: none;
+		}
+	}
+
+	&__nav-list {
+		@include mx.flex($gap: 50px);
+	}
+
+	&__nav-link {
+		display: block;
+		padding: 18px 0;
+
+		font-family: var(--secondary-font);
+		font-weight: 500;
+		line-height: 1.28;
+		color: var(--primary-light-color);
+
+		transition: color var(--transition-base);
+
+		&:hover,
+		&:focus {
+			color: var(--secondary-accent-color);
+		}
+	}
+
+	&__actions {
+		@include mx.flex($gap: 24px);
+
+		@media screen and (max-width: 1439px) {
+			display: none;
+		}
+	}
+
+	&__login-btn {
+		@extend %btn;
+
+		padding: 18px 40px;
+
+		font-weight: 500;
+		line-height: 1.28;
+	}
+
+	&__cta-btn {
+		@include mx.flex($align: center, $gap: 10px);
+		@extend %btn;
+
+		padding: 18px 24px;
+
+		font-weight: 500;
+		line-height: 1.28;
+	}
+
+	&__cta-icon {
+		fill: none;
+		stroke: currentColor;
+	}
+
+	&__burger-btn {
+		width: 42px;
+		height: 24px;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			.header__burger-icon {
+				stroke: var(--secondary-accent-color);
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			height: 34px;
+		}
+
+		@media screen and (min-width: 1440px) {
+			display: none;
+		}
+	}
+
+	&__burger-icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+		stroke: var(--primary-light-color);
+	}
+}

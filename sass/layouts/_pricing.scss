@@ -1,0 +1,256 @@
+.pricing {
+	padding: 0 0 80px;
+}
+
+.pricing__title {
+	position: relative;
+	margin-bottom: 24px;
+
+	font-size: 36px;
+	line-height: 1.22;
+	text-align: center;
+	color: var(--primary-dark-color);
+}
+
+.pricing__title::after {
+	position: absolute;
+	left: 34.02%;
+	top: 81.36%;
+	z-index: -1;
+	content: "";
+	display: block;
+	width: 46.49%;
+	height: 32.95%;
+	background-image: url(../images/text-decor.svg);
+	background-size: 100% 100%;
+}
+
+.pricing__description {
+	margin-bottom: 60px;
+
+	text-align: center;
+	color: var(--primary-dark-color);
+}
+
+.pricing__slider {
+	padding-bottom: 85px;
+}
+
+.pricing__plan {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	max-width: 289px;
+	margin: 0 calc((100vw - 289px) / 2);
+	padding: 20px;
+
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	color: var(--secondary-light-color);
+
+	box-shadow: var(--shadow-card);
+}
+
+.pricing__plan-name {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+.pricing__plan-price {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.22;
+}
+
+.pricing__plan-description {
+	line-height: 1.25;
+}
+
+.pricing__plan-benefit {
+	display: flex;
+	gap: 19px;
+	align-items: center;
+}
+
+.pricing__plan-benefit:not(:last-child) {
+	margin-bottom: 28px;
+}
+
+.pricing__plan-benefit-icon {
+	stroke: var(--secondary-accent-color);
+	flex-shrink: 0;
+}
+
+.pricing__plan-benefit-text {
+	line-height: 1.25;
+}
+
+.pricing__btn {
+	padding: 16px 40px;
+	align-self: flex-start;
+
+	background-color: var(--primary-accent-color);
+	border: none;
+	border-radius: 8px;
+
+	font-weight: 400;
+	color: var(--primary-light-color);
+}
+
+.pricing__pagination {
+	--swiper-pagination-bottom: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.pricing__pagination .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+	background-color: var(--primary-accent-color);
+}
+
+.pricing__pagination .swiper-pagination-bullet-active {
+	background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+	.pricing {
+		padding: 0 0 140px;
+	}
+
+	.pricing__title {
+		font-size: 54px;
+		line-height: 1.2;
+	}
+
+	.pricing__title::after {
+		left: 47.8%;
+		top: 60.64%;
+		width: 39.84%;
+		height: 40.37%;
+	}
+
+	.pricing__plan {
+		max-width: 472px;
+		margin: 0 calc((100vw - 472px) / 2);
+		padding: 80px 44px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.pricing {
+		padding: 0 0 55px;
+	}
+
+	.pricing__title {
+		font-size: 72px;
+	}
+
+	.pricing__title::after {
+		left: 49.1%;
+		top: 67.22%;
+		width: 24.33%;
+		height: 34.61%;
+	}
+
+	.pricing__description {
+		max-width: 976px;
+		margin: 0 auto 80px;
+	}
+
+	.pricing__slider {
+		overflow: visible;
+	}
+
+	.pricing__plans {
+		display: flex;
+		gap: 32px;
+	}
+
+	.pricing__plan-scale {
+		position: absolute;
+		inset: 0;
+
+		border: 1px solid var(--secondary-accent-color);
+		border-radius: 8px;
+
+		transition: transform var(--transition-base),
+			background-color var(--transition-base),
+			border-color var(--transition-base);
+	}
+
+	.pricing__plan {
+		position: relative;
+		width: calc((100% - 64px) / 3);
+		margin: 0;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		background-color: var(--primary-light-color);
+		color: var(--primary-dark-color);
+
+		transition: color var(--transition-base);
+	}
+
+	.pricing__plan > *:not(.pricing__plan-scale) {
+		position: relative;
+		z-index: 1;
+	}
+
+	.pricing__plan-price {
+		transition: color var(--transition-base);
+	}
+
+	.pricing__plan-benefit-icon {
+		stroke: var(--primary-dark-color);
+		transition: stroke var(--transition-base);
+	}
+
+	.pricing__btn {
+		padding: 16px 40px;
+
+		background-color: var(--primary-light-color);
+		border: 1px solid var(--secondary-accent-color);
+		color: var(--primary-dark-color);
+
+		transition: box-shadow var(--transition-base),
+			background-color var(--transition-base),
+			border-color var(--transition-base), color var(--transition-base);
+	}
+
+	.pricing__btn:hover {
+		box-shadow: 0 8px 20px rgba(79, 156, 249, 0.4);
+	}
+
+	.pricing__plan:hover {
+		color: var(--primary-light-color);
+	}
+
+	.pricing__plan:hover .pricing__plan-scale {
+		background-color: var(--primary-color);
+		border-color: transparent;
+
+		transform: scaleY(1.16);
+	}
+
+	.pricing__plan:hover .pricing__plan-price {
+		color: var(--secondary-accent-color);
+	}
+
+	.pricing__plan:hover .pricing__plan-benefit-icon {
+		stroke: var(--secondary-accent-color);
+	}
+
+	.pricing__plan:hover .pricing__btn {
+		background-color: var(--primary-accent-color);
+		border-color: transparent;
+
+		color: var(--primary-light-color);
+	}
+
+	.pricing__pagination {
+		display: none;
+	}
+}

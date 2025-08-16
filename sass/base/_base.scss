@@ -1,0 +1,39 @@
+body {
+	font-family: var(--primary-font);
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: -0.02em;
+	background-color: var(--primary-light-color);
+}
+
+button {
+	font-family: inherit;
+	line-height: inherit;
+	cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.link {
+	text-decoration: none;
+}
